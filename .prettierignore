@@ -1,0 +1,9 @@
+dist
+dev-dist
+coverage
+node_modules
+package-lock.json
+*.zip
+docs/BRIEF.md
+CLAUDE.md
+src/content/exercises.json
