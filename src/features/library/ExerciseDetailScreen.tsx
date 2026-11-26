@@ -1,4 +1,5 @@
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { BackLink } from '../../components/BackLink';
 import { getExercise } from '../../content';
 import {
   AREA_LABELS,
@@ -24,18 +25,9 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export function ExerciseDetailScreen() {
   const { exerciseId = '' } = useParams();
-  const navigate = useNavigate();
   const exercise = getExercise(exerciseId);
 
-  const back = (
-    <button
-      type="button"
-      onClick={() => (window.history.length > 1 ? navigate(-1) : navigate('/library'))}
-      className="-ml-2 mb-2 flex min-h-11 items-center gap-1 px-2 text-sm font-medium text-brand-600 dark:text-brand-400"
-    >
-      <span aria-hidden>‹</span> Library
-    </button>
-  );
+  const back = <BackLink label="Library" fallback="/library" />;
 
   if (!exercise) {
     return (
