@@ -11,6 +11,7 @@ import {
 import { Chip } from '../../components/Chip';
 import { EmptyState } from '../../components/EmptyState';
 import { formatPrescription, formatSeconds } from '../../lib/format';
+import { ExerciseIllustration } from '../illustrations/ExerciseIllustration';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -54,7 +55,13 @@ export function ExerciseDetailScreen() {
         {exercise.unilateral && <Chip>Left & right</Chip>}
       </div>
 
-      <dl className="mt-5 grid grid-cols-2 gap-3">
+      <ExerciseIllustration
+        exerciseId={exercise.id}
+        animate
+        className="mt-4 w-full rounded-2xl bg-white dark:bg-slate-900"
+      />
+
+      <dl className="mt-3 grid grid-cols-2 gap-3">
         <div className="rounded-2xl bg-white p-4 dark:bg-slate-900">
           <dt className="text-xs text-slate-500 dark:text-slate-400">Dose</dt>
           <dd className="mt-1 font-semibold">

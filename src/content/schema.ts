@@ -147,3 +147,147 @@ export type Assessment = z.infer<typeof Assessment>;
 export const ExercisesFile = z.array(Exercise);
 export const ProgramsFile = z.array(Program);
 export const AssessmentsFile = z.array(Assessment);
+
+// ---------------------------------------------------------------------------
+// Illustrations: simple stick figures drawn in-app from pose data.
+// Coordinates are in a 200 × 140 box, y pointing down. Angles are in degrees on
+// screen: 0 = right, 90 = down, -90 = up, 180 = left.
+// ---------------------------------------------------------------------------
+
+const Vec = z.tuple([z.number(), z.number()]);
+
+export const JOINT_REFS = [
+  'head',
+  'hip',
+  'shoulderN',
+  'shoulderF',
+  'elbowN',
+  'elbowF',
+  'handN',
+  'handF',
+  'hipN',
+  'hipF',
+  'kneeN',
+  'kneeF',
+  'footN',
+  'footF',
+] as const;
+export const JointRef = z.enum(JOINT_REFS);
+export type JointRef = z.infer<typeof JointRef>;
+
+/** A limb given by the absolute angle of each segment, with optional length scales (foreshortening). */
+const LimbAngles = {
+  a: z.tuple([z.number(), z.number()]),
+  len: z.tuple([z.number().positive(), z.number().positive()]).optional(),
+};
+/**
+ * A limb that reaches for a point (two-bone IK). `bend: 1` puts the elbow/knee on the side
+ * you get by turning the root→target direction 90° clockwise on screen; `-1` the other side.
+ */
+const LimbReach = {
+  to: z.union([Vec, JointRef]),
+  bend: z.union([z.literal(1), z.literal(-1)]),
+};
+/** Foot angle; omit for "perpendicular to the shin, facing forward", null to hide. */
+const Foot = { foot: z.number().nullable().optional() };
+
+export const Arm = z.union([z.strictObject(LimbAngles), z.strictObject(LimbReach)]);
+export type Arm = z.infer<typeof Arm>;
+export const Leg = z.union([
+  z.strictObject({ ...LimbAngles, ...Foot }),
+  z.strictObject({ ...LimbReach, ...Foot }),
+]);
+export type Leg = z.infer<typeof Leg>;
+
+export const Pose = z.strictObject({
+  hip: Vec,
+  /** Direction from hip to shoulders. Upright = -90. */
+  torso: z.number(),
+  /** Length scale for torso and neck (e.g. 0.15 for a top-down view of a sitting person). */
+  torsoLen: z.number().positive().optional(),
+  /** Spine curve in px, towards the side 90° clockwise from the torso direction. */
+  bend: z.number().optional(),
+  /** Head tilt relative to the torso. */
+  head: z.number().optional(),
+  /** Half shoulder / hip width, for front and top views. "N" limbs sit on the +side. */
+  sw: z.number().nonnegative().optional(),
+  hw: z.number().nonnegative().optional(),
+  armN: Arm,
+  armF: Arm,
+  legN: Leg,
+  legF: Leg,
+});
+export type Pose = z.infer<typeof Pose>;
+
+export const Prop = z.discriminatedUnion('type', [
+  z.strictObject({ type: z.literal('floor'), y: z.number() }),
+  z.strictObject({ type: z.literal('mat'), x1: z.number(), x2: z.number(), y: z.number() }),
+  z.strictObject({
+    type: z.literal('matTop'),
+    x: z.number(),
+    y: z.number(),
+    w: z.number(),
+    h: z.number(),
+  }),
+  z.strictObject({
+    type: z.literal('bench'),
+    x: z.number(),
+    y: z.number(),
+    w: z.number(),
+    floor: z.number(),
+  }),
+  z.strictObject({ type: z.literal('inclineBench'), from: Vec, to: Vec, floor: z.number() }),
+  z.strictObject({ type: z.literal('wall'), x: z.number(), floor: z.number() }),
+  z.strictObject({
+    type: z.literal('panel'),
+    x: z.number(),
+    y: z.number(),
+    w: z.number(),
+    h: z.number(),
+  }),
+  z.strictObject({ type: z.literal('bar'), x1: z.number(), x2: z.number(), y: z.number() }),
+  z.strictObject({ type: z.literal('post'), x: z.number(), y: z.number(), floor: z.number() }),
+  z.strictObject({ type: z.literal('roller'), x: z.number(), y: z.number(), r: z.number() }),
+  z.strictObject({
+    type: z.literal('cable'),
+    x: z.number(),
+    anchorY: z.number(),
+    floor: z.number(),
+    attach: JointRef,
+  }),
+  z.strictObject({ type: z.literal('dumbbell'), attach: JointRef }),
+  z.strictObject({ type: z.literal('kettlebell'), attach: JointRef }),
+]);
+export type Prop = z.infer<typeof Prop>;
+
+export const LIMBS = ['armN', 'armF', 'legN', 'legF'] as const;
+export type LimbName = (typeof LIMBS)[number];
+
+export const Illustration = z
+  .strictObject({
+    exerciseId: Id,
+    /** "side" draws the far limbs fainter; "front" and "top" draw both sides the same. */
+    view: z.enum(['side', 'front', 'top']),
+    /** Which way the figure faces (for default foot direction). */
+    face: z.union([z.literal(1), z.literal(-1)]).optional(),
+    /** Limbs drawn in the accent colour: the ones doing the work. */
+    highlight: z.array(z.enum(LIMBS)).optional(),
+    props: z.array(Prop),
+    frames: z.array(Pose).min(1),
+    /** pingpong: 0→n→0. cycle: 0→n→0 continuing in the same direction (for circles). */
+    loop: z.enum(['pingpong', 'cycle']).optional(),
+    /** Frame drawn solid in the still picture (frame 0 is drawn faint behind it). Default: last. */
+    staticFrame: z.number().int().nonnegative().optional(),
+    /** Frame drawn faint behind it in the still picture. Default: 0. */
+    ghostFrame: z.number().int().nonnegative().optional(),
+  })
+  .superRefine((ill, ctx) => {
+    for (const key of ['staticFrame', 'ghostFrame'] as const) {
+      const v = ill[key];
+      if (v !== undefined && v >= ill.frames.length)
+        ctx.addIssue({ code: 'custom', message: `${key} is out of range` });
+    }
+  });
+export type Illustration = z.infer<typeof Illustration>;
+
+export const IllustrationsFile = z.array(Illustration);

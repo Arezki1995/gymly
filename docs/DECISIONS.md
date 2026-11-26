@@ -38,3 +38,13 @@ Small calls made where the brief was open. Newest last.
 - **Progression** (`progression` in programs.json) isn't applied yet: it needs the program start date, which arrives with the persisted store in Phase 3.
 - **Not saved yet:** the player builds a log in the §7 `sessionLogs` shape (`toSessionLog`), but nothing is stored until Phase 3. Leaving mid-session asks for confirmation. XP and badges on the end screen come in Phase 5.
 - **Session log items** are one entry per exercise, with `setsDone` counting both sides (no per-side `side` entries).
+
+## Illustrations (between Phase 2 and 3)
+
+- **Style:** simple stick figures drawn in-app as SVG (the brief asks for "simple SVG line drawings made in-app, not copied images" for the angle picker; same approach here). No image files, so they work offline, scale to any screen and follow dark mode.
+- **Data, not code:** each exercise has an entry in `src/content/illustrations.json` with keyframe poses (hip position, torso angle, and each limb as segment angles or a point to reach for) plus props (bench, cable, mat, dumbbell…). The renderer in `src/lib/figure.ts` does the maths; limbs keep their length and planted feet stay planted while animating.
+- **Required for every exercise:** the content check (tests and build) fails if an exercise has no illustration, an illustration names an unknown exercise, or a pose can't be drawn. Adding a new exercise therefore means adding a pose entry too: still JSON only.
+- **Motion:** the exercise page and the player loop the movement. The working limb is drawn in green. In side views the far-side limbs are faded. The Library list shows a still picture: the end position, with the start position faint behind it. With "reduce motion" switched on, everything shows the still picture.
+- **Views:** most figures are side-on. Rotations that are clearer from the front (cable rotations, Cuban press, wall slides, Cossack squat, hip abduction) use a front view, and 90/90 and open-book use a top-down view.
+- **Player layout:** to fit the figure on a phone screen during holds, the cues sit behind a "How to do it" toggle on hold screens, and the "Felt tight?" rating moved from hold screens to the rest screen between sets (it's still on rep screens).
+- **Review page:** `#/dev/illustrations` (dev server only) shows every figure still and animated, for checking new poses.

@@ -18,6 +18,7 @@ function validateContentPlugin(): Plugin {
         exercises: read('exercises'),
         programs: read('programs'),
         assessments: read('assessments'),
+        illustrations: read('illustrations'),
       });
       if (errors.length) this.error(`Invalid content:\n  ${errors.join('\n  ')}`);
     },

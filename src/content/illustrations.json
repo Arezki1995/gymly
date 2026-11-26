@@ -1,0 +1,2199 @@
+[
+  {
+    "exerciseId": "shoulder-cars",
+    "view": "side",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      }
+    ],
+    "loop": "cycle",
+    "staticFrame": 1,
+    "ghostFrame": 3,
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "armN": {
+          "a": [90, 85]
+        },
+        "armF": {
+          "a": [92, 92]
+        },
+        "legN": {
+          "to": [103, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [97, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "armN": {
+          "a": [0, -5]
+        },
+        "armF": {
+          "a": [92, 92]
+        },
+        "legN": {
+          "to": [103, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [97, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "armN": {
+          "a": [-90, -95]
+        },
+        "armF": {
+          "a": [92, 92]
+        },
+        "legN": {
+          "to": [103, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [97, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "armN": {
+          "a": [-180, -185]
+        },
+        "armF": {
+          "a": [92, 92]
+        },
+        "legN": {
+          "to": [103, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [97, 124],
+          "bend": -1
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "cable-er-0",
+    "view": "front",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "cable",
+        "x": 30,
+        "anchorY": 62,
+        "floor": 124,
+        "attach": "handN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [88, 180]
+        },
+        "armF": {
+          "a": [96, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [88, 95],
+          "len": [1, 0.25]
+        },
+        "armF": {
+          "a": [96, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [88, 0]
+        },
+        "armF": {
+          "a": [96, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "cable-ir-0",
+    "view": "front",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "cable",
+        "x": 175,
+        "anchorY": 62,
+        "floor": 124,
+        "attach": "handN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [88, 0]
+        },
+        "armF": {
+          "a": [96, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [88, 95],
+          "len": [1, 0.25]
+        },
+        "armF": {
+          "a": [96, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [88, 180]
+        },
+        "armF": {
+          "a": [96, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "cable-er-90",
+    "view": "front",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "cable",
+        "x": 182,
+        "anchorY": 40,
+        "floor": 124,
+        "attach": "handN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [0, 80],
+          "len": [1, 0.3]
+        },
+        "armF": {
+          "a": [96, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [0, -88]
+        },
+        "armF": {
+          "a": [96, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "side-lying-db-er",
+    "view": "side",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "mat",
+        "x1": 30,
+        "x2": 180,
+        "y": 124
+      },
+      {
+        "type": "dumbbell",
+        "attach": "handN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [122, 112],
+        "torso": 180,
+        "sw": 7,
+        "hw": 6,
+        "armN": {
+          "a": [0, 75],
+          "len": [1, 0.75]
+        },
+        "armF": {
+          "a": [180, 180]
+        },
+        "legN": {
+          "a": [2, 8],
+          "foot": null
+        },
+        "legF": {
+          "a": [6, 2],
+          "foot": null
+        }
+      },
+      {
+        "hip": [122, 112],
+        "torso": 180,
+        "sw": 7,
+        "hw": 6,
+        "armN": {
+          "a": [0, 0],
+          "len": [1, 0.2]
+        },
+        "armF": {
+          "a": [180, 180]
+        },
+        "legN": {
+          "a": [2, 8],
+          "foot": null
+        },
+        "legF": {
+          "a": [6, 2],
+          "foot": null
+        }
+      },
+      {
+        "hip": [122, 112],
+        "torso": 180,
+        "sw": 7,
+        "hw": 6,
+        "armN": {
+          "a": [0, -88]
+        },
+        "armF": {
+          "a": [180, 180]
+        },
+        "legN": {
+          "a": [2, 8],
+          "foot": null
+        },
+        "legF": {
+          "a": [6, 2],
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "sleeper-stretch",
+    "view": "side",
+    "highlight": ["armF"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "mat",
+        "x1": 30,
+        "x2": 180,
+        "y": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [122, 112],
+        "torso": 180,
+        "sw": 7,
+        "hw": 6,
+        "armN": {
+          "to": "handF",
+          "bend": -1
+        },
+        "armF": {
+          "a": [70, -90],
+          "len": [0.5, 1]
+        },
+        "legN": {
+          "a": [2, 8],
+          "foot": null
+        },
+        "legF": {
+          "a": [6, 2],
+          "foot": null
+        }
+      },
+      {
+        "hip": [122, 112],
+        "torso": 180,
+        "sw": 7,
+        "hw": 6,
+        "armN": {
+          "to": "handF",
+          "bend": -1
+        },
+        "armF": {
+          "a": [70, -20],
+          "len": [0.5, 1]
+        },
+        "legN": {
+          "a": [2, 8],
+          "foot": null
+        },
+        "legF": {
+          "a": [6, 2],
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "cross-body-stretch",
+    "view": "front",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [150, 165]
+        },
+        "armF": {
+          "to": "elbowN",
+          "bend": 1
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [178, 182]
+        },
+        "armF": {
+          "to": "elbowN",
+          "bend": 1
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "face-pull-er",
+    "view": "side",
+    "highlight": ["armN", "armF"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "cable",
+        "x": 180,
+        "anchorY": 32,
+        "floor": 124,
+        "attach": "handN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [96, 76],
+        "torso": -90,
+        "armN": {
+          "a": [-12, -10]
+        },
+        "armF": {
+          "a": [-10, -8]
+        },
+        "legN": {
+          "to": [103, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [97, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [96, 76],
+        "torso": -90,
+        "armN": {
+          "a": [178, -82]
+        },
+        "armF": {
+          "a": [180, -80]
+        },
+        "legN": {
+          "to": [103, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [97, 124],
+          "bend": -1
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "cuban-press",
+    "view": "front",
+    "highlight": ["armN", "armF"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "dumbbell",
+        "attach": "handN"
+      },
+      {
+        "type": "dumbbell",
+        "attach": "handF"
+      }
+    ],
+    "staticFrame": 2,
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [80, 90]
+        },
+        "armF": {
+          "a": [100, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [0, 90]
+        },
+        "armF": {
+          "a": [180, 90]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [0, -90]
+        },
+        "armF": {
+          "a": [180, 270]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [-62, -82]
+        },
+        "armF": {
+          "a": [242, 262]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "kb-arm-bar",
+    "view": "side",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "mat",
+        "x1": 30,
+        "x2": 185,
+        "y": 124
+      },
+      {
+        "type": "kettlebell",
+        "attach": "handN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [124, 118],
+        "torso": 180,
+        "armN": {
+          "a": [-90, -90]
+        },
+        "armF": {
+          "a": [180, 180]
+        },
+        "legN": {
+          "to": [156, 124],
+          "bend": -1,
+          "foot": null
+        },
+        "legF": {
+          "a": [0, 0],
+          "foot": null
+        }
+      },
+      {
+        "hip": [124, 116],
+        "torso": 182,
+        "armN": {
+          "a": [-92, -92]
+        },
+        "armF": {
+          "a": [178, 178]
+        },
+        "legN": {
+          "to": [150, 112],
+          "bend": -1,
+          "foot": null
+        },
+        "legF": {
+          "a": [0, 0],
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "foam-roller-tspine-ext",
+    "view": "side",
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "roller",
+        "x": 100,
+        "y": 115,
+        "r": 9
+      }
+    ],
+    "frames": [
+      {
+        "hip": [134, 118],
+        "torso": 200,
+        "bend": 2,
+        "head": -25,
+        "armN": {
+          "to": "head",
+          "bend": -1
+        },
+        "armF": {
+          "to": "head",
+          "bend": -1
+        },
+        "legN": {
+          "to": [162, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [158, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [134, 118],
+        "torso": 190,
+        "bend": -4,
+        "head": 15,
+        "armN": {
+          "to": "head",
+          "bend": -1
+        },
+        "armF": {
+          "to": "head",
+          "bend": -1
+        },
+        "legN": {
+          "to": [162, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [158, 124],
+          "bend": -1
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "open-book",
+    "view": "top",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "matTop",
+        "x": 30,
+        "y": 30,
+        "w": 150,
+        "h": 90
+      }
+    ],
+    "frames": [
+      {
+        "hip": [130, 62],
+        "torso": 180,
+        "sw": 2,
+        "armN": {
+          "a": [90, 90]
+        },
+        "armF": {
+          "a": [92, 92]
+        },
+        "legN": {
+          "a": [90, 0],
+          "foot": null
+        },
+        "legF": {
+          "a": [92, 2],
+          "foot": null
+        }
+      },
+      {
+        "hip": [130, 62],
+        "torso": 180,
+        "sw": 2,
+        "armN": {
+          "a": [30, 30],
+          "len": [0.15, 0.15]
+        },
+        "armF": {
+          "a": [92, 92]
+        },
+        "legN": {
+          "a": [90, 0],
+          "foot": null
+        },
+        "legF": {
+          "a": [92, 2],
+          "foot": null
+        }
+      },
+      {
+        "hip": [130, 62],
+        "torso": 180,
+        "sw": 2,
+        "armN": {
+          "a": [-88, -88]
+        },
+        "armF": {
+          "a": [92, 92]
+        },
+        "legN": {
+          "a": [90, 0],
+          "foot": null
+        },
+        "legF": {
+          "a": [92, 2],
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "thread-the-needle",
+    "view": "side",
+    "face": -1,
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "mat",
+        "x1": 40,
+        "x2": 170,
+        "y": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [122, 100],
+        "torso": 202,
+        "armN": {
+          "a": [110, 120],
+          "len": [0.55, 0.55]
+        },
+        "armF": {
+          "to": [84, 124],
+          "bend": 1
+        },
+        "legN": {
+          "a": [90, 0],
+          "foot": null
+        },
+        "legF": {
+          "a": [92, 0],
+          "foot": null
+        },
+        "head": -30
+      },
+      {
+        "hip": [122, 100],
+        "torso": 202,
+        "armN": {
+          "a": [-88, -90]
+        },
+        "armF": {
+          "to": [84, 124],
+          "bend": 1
+        },
+        "legN": {
+          "a": [90, 0],
+          "foot": null
+        },
+        "legF": {
+          "a": [92, 0],
+          "foot": null
+        },
+        "head": 20
+      }
+    ]
+  },
+  {
+    "exerciseId": "bench-lat-stretch",
+    "view": "side",
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "bench",
+        "x": 124,
+        "y": 96,
+        "w": 60,
+        "floor": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [78, 100],
+        "torso": -14,
+        "armN": {
+          "a": [8, 200]
+        },
+        "armF": {
+          "a": [10, 202]
+        },
+        "legN": {
+          "to": [50, 124],
+          "bend": -1,
+          "foot": null
+        },
+        "legF": {
+          "to": [48, 124],
+          "bend": -1,
+          "foot": null
+        }
+      },
+      {
+        "hip": [70, 104],
+        "torso": 8,
+        "head": 25,
+        "armN": {
+          "a": [-34, 205]
+        },
+        "armF": {
+          "a": [-32, 207]
+        },
+        "legN": {
+          "to": [50, 124],
+          "bend": -1,
+          "foot": null
+        },
+        "legF": {
+          "to": [48, 124],
+          "bend": -1,
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "wall-slides",
+    "view": "front",
+    "highlight": ["armN", "armF"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "panel",
+        "x": 50,
+        "y": 6,
+        "w": 100,
+        "h": 120
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [25, -85]
+        },
+        "armF": {
+          "a": [155, 265]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "a": [-58, -72]
+        },
+        "armF": {
+          "a": [238, 252]
+        },
+        "legN": {
+          "to": [108, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [92, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "prone-ytw",
+    "view": "side",
+    "highlight": ["armN", "armF"],
+    "loop": "cycle",
+    "staticFrame": 0,
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "inclineBench",
+        "from": [50, 118],
+        "to": [124, 76],
+        "floor": 124
+      },
+      {
+        "type": "dumbbell",
+        "attach": "handN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [82, 96],
+        "torso": -30,
+        "armN": {
+          "a": [-30, -30]
+        },
+        "armF": {
+          "a": [-28, -28]
+        },
+        "legN": {
+          "to": [46, 124],
+          "bend": -1,
+          "foot": null
+        },
+        "legF": {
+          "to": [42, 124],
+          "bend": -1,
+          "foot": null
+        }
+      },
+      {
+        "hip": [82, 96],
+        "torso": -30,
+        "armN": {
+          "a": [70, 70],
+          "len": [0.3, 0.3]
+        },
+        "armF": {
+          "a": [72, 72],
+          "len": [0.3, 0.3]
+        },
+        "legN": {
+          "to": [46, 124],
+          "bend": -1,
+          "foot": null
+        },
+        "legF": {
+          "to": [42, 124],
+          "bend": -1,
+          "foot": null
+        }
+      },
+      {
+        "hip": [82, 96],
+        "torso": -30,
+        "armN": {
+          "a": [165, 95],
+          "len": [0.75, 0.5]
+        },
+        "armF": {
+          "a": [167, 97],
+          "len": [0.75, 0.5]
+        },
+        "legN": {
+          "to": [46, 124],
+          "bend": -1,
+          "foot": null
+        },
+        "legF": {
+          "to": [42, 124],
+          "bend": -1,
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "dead-hang",
+    "view": "side",
+    "props": [
+      {
+        "type": "bar",
+        "x1": 60,
+        "x2": 140,
+        "y": 10
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 87],
+        "torso": -90,
+        "armN": {
+          "a": [-90, -90]
+        },
+        "armF": {
+          "a": [-92, -92]
+        },
+        "legN": {
+          "a": [95, 88]
+        },
+        "legF": {
+          "a": [92, 86]
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "scap-pullups",
+    "view": "side",
+    "highlight": ["armN", "armF"],
+    "props": [
+      {
+        "type": "bar",
+        "x1": 60,
+        "x2": 140,
+        "y": 10
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 87],
+        "torso": -90,
+        "armN": {
+          "a": [-90, -90]
+        },
+        "armF": {
+          "a": [-92, -92]
+        },
+        "legN": {
+          "a": [95, 88]
+        },
+        "legF": {
+          "a": [92, 86]
+        }
+      },
+      {
+        "hip": [100, 81],
+        "torso": -90,
+        "armN": {
+          "a": [-90, -90],
+          "len": [0.85, 0.85]
+        },
+        "armF": {
+          "a": [-92, -92],
+          "len": [0.85, 0.85]
+        },
+        "legN": {
+          "a": [95, 88]
+        },
+        "legF": {
+          "a": [92, 86]
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "hip-cars",
+    "view": "side",
+    "highlight": ["legN"],
+    "loop": "cycle",
+    "staticFrame": 2,
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "wall",
+        "x": 146,
+        "floor": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "armN": {
+          "a": [90, 90]
+        },
+        "armF": {
+          "to": [144, 58],
+          "bend": 1
+        },
+        "legN": {
+          "a": [-5, 90]
+        },
+        "legF": {
+          "to": [99, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "armN": {
+          "a": [90, 90]
+        },
+        "armF": {
+          "to": [144, 58],
+          "bend": 1
+        },
+        "legN": {
+          "a": [15, 90],
+          "len": [0.35, 1]
+        },
+        "legF": {
+          "to": [99, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "armN": {
+          "a": [90, 90]
+        },
+        "armF": {
+          "to": [144, 58],
+          "bend": 1
+        },
+        "legN": {
+          "a": [125, 175]
+        },
+        "legF": {
+          "to": [99, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "armN": {
+          "a": [90, 90]
+        },
+        "armF": {
+          "to": [144, 58],
+          "bend": 1
+        },
+        "legN": {
+          "a": [85, 90]
+        },
+        "legF": {
+          "to": [99, 124],
+          "bend": -1
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "90-90-switches",
+    "view": "top",
+    "highlight": ["legN", "legF"],
+    "props": [
+      {
+        "type": "matTop",
+        "x": 40,
+        "y": 22,
+        "w": 120,
+        "h": 96
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 66],
+        "torso": -90,
+        "torsoLen": 0.15,
+        "sw": 12,
+        "hw": 7,
+        "armN": {
+          "a": [70, 130],
+          "len": [0.45, 0.45]
+        },
+        "armF": {
+          "a": [110, 50],
+          "len": [0.45, 0.45]
+        },
+        "legN": {
+          "a": [60, 180],
+          "foot": null
+        },
+        "legF": {
+          "a": [180, -90],
+          "foot": null
+        }
+      },
+      {
+        "hip": [100, 66],
+        "torso": -90,
+        "torsoLen": 0.15,
+        "sw": 12,
+        "hw": 7,
+        "armN": {
+          "a": [70, 130],
+          "len": [0.45, 0.45]
+        },
+        "armF": {
+          "a": [110, 50],
+          "len": [0.45, 0.45]
+        },
+        "legN": {
+          "a": [0, -90],
+          "foot": null
+        },
+        "legF": {
+          "a": [120, 0],
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "90-90-ir-liftoff",
+    "view": "top",
+    "highlight": ["legF"],
+    "props": [
+      {
+        "type": "matTop",
+        "x": 40,
+        "y": 22,
+        "w": 120,
+        "h": 96
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 66],
+        "torso": -90,
+        "torsoLen": 0.15,
+        "sw": 12,
+        "hw": 7,
+        "armN": {
+          "a": [70, 130],
+          "len": [0.45, 0.45]
+        },
+        "armF": {
+          "a": [110, 50],
+          "len": [0.45, 0.45]
+        },
+        "legN": {
+          "a": [60, 180],
+          "foot": null
+        },
+        "legF": {
+          "a": [180, -90],
+          "foot": null
+        }
+      },
+      {
+        "hip": [100, 66],
+        "torso": -90,
+        "torsoLen": 0.15,
+        "sw": 12,
+        "hw": 7,
+        "armN": {
+          "a": [70, 130],
+          "len": [0.45, 0.45]
+        },
+        "armF": {
+          "a": [110, 50],
+          "len": [0.45, 0.45]
+        },
+        "legN": {
+          "a": [60, 180],
+          "foot": null
+        },
+        "legF": {
+          "a": [180, -90],
+          "len": [1, 0.35],
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "couch-stretch",
+    "view": "side",
+    "highlight": ["legF"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "bench",
+        "x": 14,
+        "y": 96,
+        "w": 46,
+        "floor": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [84, 102],
+        "torso": -68,
+        "armN": {
+          "to": "kneeN",
+          "bend": 1
+        },
+        "armF": {
+          "to": "kneeN",
+          "bend": 1
+        },
+        "legN": {
+          "to": [112, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [62, 98],
+          "bend": -1,
+          "foot": -150
+        }
+      },
+      {
+        "hip": [86, 103],
+        "torso": -96,
+        "armN": {
+          "to": "kneeN",
+          "bend": 1
+        },
+        "armF": {
+          "to": "kneeN",
+          "bend": 1
+        },
+        "legN": {
+          "to": [112, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [62, 98],
+          "bend": -1,
+          "foot": -150
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "half-kneeling-hip-flexor",
+    "view": "side",
+    "highlight": ["legF", "armF"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "mat",
+        "x1": 30,
+        "x2": 150,
+        "y": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [78, 100],
+        "torso": -90,
+        "armN": {
+          "a": [92, 92]
+        },
+        "armF": {
+          "a": [90, 90]
+        },
+        "legN": {
+          "to": [110, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [46, 124],
+          "bend": -1,
+          "foot": null
+        }
+      },
+      {
+        "hip": [86, 101],
+        "torso": -96,
+        "armN": {
+          "a": [92, 92]
+        },
+        "armF": {
+          "a": [-104, -118]
+        },
+        "legN": {
+          "to": [110, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [46, 124],
+          "bend": -1,
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "bench-figure-4",
+    "view": "side",
+    "highlight": ["legN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "bench",
+        "x": 112,
+        "y": 88,
+        "w": 66,
+        "floor": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [92, 76],
+        "torso": -90,
+        "armN": {
+          "a": [95, 95]
+        },
+        "armF": {
+          "a": [93, 93]
+        },
+        "legN": {
+          "a": [18, 60],
+          "len": [1, 0.35],
+          "foot": null
+        },
+        "legF": {
+          "to": [88, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [86, 80],
+        "torso": -52,
+        "armN": {
+          "to": [132, 86],
+          "bend": 1
+        },
+        "armF": {
+          "to": [128, 86],
+          "bend": 1
+        },
+        "legN": {
+          "a": [22, 62],
+          "len": [1, 0.35],
+          "foot": null
+        },
+        "legF": {
+          "to": [88, 124],
+          "bend": -1
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "goblet-squat-pry",
+    "view": "side",
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "kettlebell",
+        "attach": "handN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [94, 104],
+        "torso": -76,
+        "legN": {
+          "to": [114, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [110, 124],
+          "bend": -1
+        },
+        "armN": {
+          "to": [120, 68],
+          "bend": 1
+        },
+        "armF": {
+          "to": [119, 68],
+          "bend": 1
+        }
+      },
+      {
+        "hip": [90, 106],
+        "torso": -84,
+        "legN": {
+          "to": [114, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [110, 124],
+          "bend": -1
+        },
+        "armN": {
+          "to": [118, 72],
+          "bend": 1
+        },
+        "armF": {
+          "to": [117, 72],
+          "bend": 1
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "deep-squat-hold",
+    "view": "side",
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "post",
+        "x": 154,
+        "y": 30,
+        "floor": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [96, 76],
+        "torso": -90,
+        "armN": {
+          "to": [152, 62],
+          "bend": 1
+        },
+        "armF": {
+          "to": [152, 64],
+          "bend": 1
+        },
+        "legN": {
+          "to": [103, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [97, 124],
+          "bend": -1
+        }
+      },
+      {
+        "hip": [94, 104],
+        "torso": -76,
+        "legN": {
+          "to": [114, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [110, 124],
+          "bend": -1
+        },
+        "armN": {
+          "to": [152, 72],
+          "bend": 1
+        },
+        "armF": {
+          "to": [152, 74],
+          "bend": 1
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "cossack-squat",
+    "view": "front",
+    "highlight": ["legN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 82],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "to": [104, 62],
+          "bend": -1
+        },
+        "armF": {
+          "to": [96, 62],
+          "bend": 1
+        },
+        "legN": {
+          "to": [136, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [64, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [120, 102],
+        "torso": -84,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "to": [126, 72],
+          "bend": -1
+        },
+        "armF": {
+          "to": [118, 72],
+          "bend": 1
+        },
+        "legN": {
+          "to": [136, 124],
+          "bend": -1,
+          "foot": 10
+        },
+        "legF": {
+          "to": [64, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "adductor-rockback",
+    "view": "side",
+    "face": -1,
+    "highlight": ["legN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "mat",
+        "x1": 40,
+        "x2": 170,
+        "y": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [122, 100],
+        "torso": 202,
+        "armN": {
+          "to": [86, 124],
+          "bend": 1
+        },
+        "armF": {
+          "to": [84, 124],
+          "bend": 1
+        },
+        "legN": {
+          "a": [75, 75],
+          "len": [0.5, 0.5],
+          "foot": null
+        },
+        "legF": {
+          "to": [146, 124],
+          "bend": 1,
+          "foot": null
+        }
+      },
+      {
+        "hip": [134, 104],
+        "torso": 196,
+        "armN": {
+          "to": [86, 124],
+          "bend": 1
+        },
+        "armF": {
+          "to": [84, 124],
+          "bend": 1
+        },
+        "legN": {
+          "a": [75, 75],
+          "len": [0.5, 0.5],
+          "foot": null
+        },
+        "legF": {
+          "to": [146, 124],
+          "bend": 1,
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "cable-hip-abduction",
+    "view": "front",
+    "highlight": ["legN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "cable",
+        "x": 30,
+        "anchorY": 116,
+        "floor": 124,
+        "attach": "footN"
+      }
+    ],
+    "frames": [
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "to": "hipN",
+          "bend": -1
+        },
+        "armF": {
+          "to": [36, 66],
+          "bend": -1
+        },
+        "legN": {
+          "a": [90, 90],
+          "foot": 10
+        },
+        "legF": {
+          "to": [96, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      },
+      {
+        "hip": [100, 76],
+        "torso": -90,
+        "sw": 11,
+        "hw": 6,
+        "armN": {
+          "to": "hipN",
+          "bend": -1
+        },
+        "armF": {
+          "to": [36, 66],
+          "bend": -1
+        },
+        "legN": {
+          "a": [62, 62],
+          "foot": 10
+        },
+        "legF": {
+          "to": [96, 124],
+          "bend": 1,
+          "foot": 170
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "worlds-greatest-stretch",
+    "view": "side",
+    "highlight": ["armN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "mat",
+        "x1": 30,
+        "x2": 160,
+        "y": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [90, 102],
+        "torso": -32,
+        "head": 20,
+        "armF": {
+          "to": [112, 124],
+          "bend": 1
+        },
+        "armN": {
+          "to": [110, 112],
+          "bend": -1
+        },
+        "legN": {
+          "to": [116, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [48, 124],
+          "bend": -1,
+          "foot": -20
+        }
+      },
+      {
+        "hip": [90, 102],
+        "torso": -32,
+        "head": -40,
+        "armF": {
+          "to": [112, 124],
+          "bend": 1
+        },
+        "armN": {
+          "a": [-88, -90]
+        },
+        "legN": {
+          "to": [116, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [48, 124],
+          "bend": -1,
+          "foot": -20
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "cat-cow",
+    "view": "side",
+    "face": -1,
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "mat",
+        "x1": 40,
+        "x2": 170,
+        "y": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [122, 100],
+        "torso": 202,
+        "armN": {
+          "to": [86, 124],
+          "bend": 1
+        },
+        "armF": {
+          "to": [84, 124],
+          "bend": 1
+        },
+        "legN": {
+          "a": [90, 0],
+          "foot": null
+        },
+        "legF": {
+          "a": [92, 0],
+          "foot": null
+        },
+        "bend": -7,
+        "head": 28
+      },
+      {
+        "hip": [122, 100],
+        "torso": 202,
+        "armN": {
+          "to": [86, 124],
+          "bend": 1
+        },
+        "armF": {
+          "to": [84, 124],
+          "bend": 1
+        },
+        "legN": {
+          "a": [90, 0],
+          "foot": null
+        },
+        "legF": {
+          "a": [92, 0],
+          "foot": null
+        },
+        "bend": 9,
+        "head": -40
+      }
+    ]
+  },
+  {
+    "exerciseId": "knee-to-wall",
+    "view": "side",
+    "highlight": ["legN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "wall",
+        "x": 146,
+        "floor": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [106, 100],
+        "torso": -88,
+        "armN": {
+          "to": "kneeN",
+          "bend": 1
+        },
+        "armF": {
+          "to": [145, 68],
+          "bend": 1
+        },
+        "legN": {
+          "to": [130, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [80, 124],
+          "bend": -1,
+          "foot": null
+        }
+      },
+      {
+        "hip": [116, 100],
+        "torso": -84,
+        "armN": {
+          "to": "kneeN",
+          "bend": 1
+        },
+        "armF": {
+          "to": [145, 66],
+          "bend": 1
+        },
+        "legN": {
+          "to": [130, 124],
+          "bend": -1
+        },
+        "legF": {
+          "to": [80, 124],
+          "bend": -1,
+          "foot": null
+        }
+      }
+    ]
+  },
+  {
+    "exerciseId": "copenhagen-plank",
+    "view": "side",
+    "highlight": ["legN"],
+    "props": [
+      {
+        "type": "floor",
+        "y": 124
+      },
+      {
+        "type": "bench",
+        "x": 120,
+        "y": 92,
+        "w": 60,
+        "floor": 124
+      }
+    ],
+    "frames": [
+      {
+        "hip": [98, 114],
+        "torso": 196,
+        "armF": {
+          "a": [88, 0],
+          "len": [1, 0.45]
+        },
+        "armN": {
+          "a": [15, 40]
+        },
+        "legN": {
+          "to": [150, 92],
+          "bend": 1,
+          "foot": null
+        },
+        "legF": {
+          "a": [40, 100],
+          "foot": null
+        }
+      },
+      {
+        "hip": [98, 104],
+        "torso": 181,
+        "armF": {
+          "a": [88, 0],
+          "len": [1, 0.45]
+        },
+        "armN": {
+          "a": [10, 30]
+        },
+        "legN": {
+          "to": [150, 92],
+          "bend": 1,
+          "foot": null
+        },
+        "legF": {
+          "a": [10, 60],
+          "foot": null
+        }
+      }
+    ]
+  }
+]

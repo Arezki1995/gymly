@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AppLayout } from './components/AppLayout';
 import { TodayScreen } from './features/today/TodayScreen';
@@ -9,10 +10,24 @@ import { ExerciseDetailScreen } from './features/library/ExerciseDetailScreen';
 import { ProgressScreen } from './features/progress/ProgressScreen';
 import { SettingsScreen } from './features/settings/SettingsScreen';
 
+const IllustrationGallery = import.meta.env.DEV
+  ? lazy(() => import('./features/illustrations/IllustrationGallery'))
+  : null;
+
 export function AppRoutes() {
   return (
     <Routes>
       <Route path="play/:programId/:sessionId" element={<PlayerScreen />} />
+      {IllustrationGallery && (
+        <Route
+          path="dev/illustrations"
+          element={
+            <Suspense>
+              <IllustrationGallery />
+            </Suspense>
+          }
+        />
+      )}
       <Route element={<AppLayout />}>
         <Route index element={<TodayScreen />} />
         <Route path="programs" element={<ProgramsScreen />} />

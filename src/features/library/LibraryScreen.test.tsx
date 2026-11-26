@@ -15,7 +15,7 @@ function renderAt(path: string) {
 const resultLinks = () =>
   within(screen.getByRole('main'))
     .getAllByRole('link')
-    .map((a) => a.querySelector('div')?.textContent);
+    .map((a) => a.querySelector('.font-semibold')?.textContent);
 
 describe('Library', () => {
   it('lists every exercise', () => {

@@ -1,6 +1,7 @@
 import exercisesJson from './exercises.json';
 import programsJson from './programs.json';
 import assessmentsJson from './assessments.json';
+import illustrationsJson from './illustrations.json';
 import { validateContent, type RawContent } from './validate';
 import { exercises, programs, assessments } from './index';
 
@@ -9,6 +10,7 @@ const raw = (): RawContent =>
     exercises: exercisesJson,
     programs: programsJson,
     assessments: assessmentsJson,
+    illustrations: illustrationsJson,
   });
 
 describe('content files', () => {
@@ -78,6 +80,33 @@ describe('validateContent catches mistakes', () => {
     wall.measure.scoreLabels = ['only one'];
     expect(validateContent(c)).toEqual([
       'assessments.json: [3] score tests need one scoreLabel per score',
+    ]);
+  });
+});
+
+describe('illustrations', () => {
+  it('flags an exercise without an illustration', () => {
+    const c = raw();
+    c.illustrations = (c.illustrations as typeof illustrationsJson).filter(
+      (i) => i.exerciseId !== 'dead-hang',
+    );
+    expect(validateContent(c)).toEqual(['illustrations.json: no illustration for "dead-hang"']);
+  });
+
+  it('flags an illustration for an unknown exercise', () => {
+    const c = raw();
+    (c.illustrations as typeof illustrationsJson)[0]!.exerciseId = 'ghost';
+    expect(validateContent(c)).toContain('illustrations.json: "ghost" is not an exercise');
+  });
+
+  it('flags poses that cannot be drawn', () => {
+    const c = raw();
+    const frame = (c.illustrations as Array<{ frames: Array<Record<string, unknown>> }>)[0]!
+      .frames[0]!;
+    frame.armN = { to: 'handF', bend: 1 };
+    frame.armF = { to: 'handN', bend: 1 };
+    expect(validateContent(c)).toEqual([
+      'illustrations.json: "shoulder-cars" frame 0: Could not place armF, armN (circular reference)',
     ]);
   });
 });

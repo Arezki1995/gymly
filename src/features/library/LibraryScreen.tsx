@@ -23,6 +23,7 @@ import { EmptyState } from '../../components/EmptyState';
 import { Chip } from '../../components/Chip';
 import { formatPrescription } from '../../lib/format';
 import { filterExercises, type LibraryFilters } from './filter';
+import { ExerciseIllustration } from '../illustrations/ExerciseIllustration';
 
 /** Picked equipment ("bodyweight" is implied, so it isn't offered as a toggle). */
 const EQUIPMENT_CHOICES = EQUIPMENT_IDS.filter((e) => e !== 'none');
@@ -213,16 +214,22 @@ export function LibraryScreen() {
             <li key={e.id}>
               <Link
                 to={`/library/${e.id}`}
-                className="block rounded-2xl border border-slate-200 bg-white p-4 active:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:active:bg-slate-800"
+                className="flex gap-3 rounded-2xl border border-slate-200 bg-white p-3 active:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:active:bg-slate-800"
               >
-                <div className="font-semibold">{e.name}</div>
-                <div className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                  {formatPrescription(e.defaultSets, e.dose, e.unilateral)}
-                </div>
-                <div className="mt-2 flex flex-wrap gap-1.5">
-                  <Chip tone="brand">{AREA_LABELS[e.area]}</Chip>
-                  <Chip>{TYPE_LABELS[e.type]}</Chip>
-                  <Chip>{LEVEL_LABELS[e.level]}</Chip>
+                <ExerciseIllustration
+                  exerciseId={e.id}
+                  className="h-16 w-[5.7rem] shrink-0 rounded-xl bg-slate-50 dark:bg-slate-950"
+                />
+                <div className="min-w-0">
+                  <div className="font-semibold">{e.name}</div>
+                  <div className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                    {formatPrescription(e.defaultSets, e.dose, e.unilateral)}
+                  </div>
+                  <div className="mt-2 flex flex-wrap gap-1.5">
+                    <Chip tone="brand">{AREA_LABELS[e.area]}</Chip>
+                    <Chip>{TYPE_LABELS[e.type]}</Chip>
+                    <Chip>{LEVEL_LABELS[e.level]}</Chip>
+                  </div>
                 </div>
               </Link>
             </li>

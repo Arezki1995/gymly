@@ -15,5 +15,10 @@
     "noUnusedParameters": true,
     "skipLibCheck": true
   },
-  "include": ["vite.config.ts", "src/content/schema.ts", "src/content/validate.ts"]
+  "include": [
+    "vite.config.ts",
+    "src/content/schema.ts",
+    "src/content/validate.ts",
+    "src/lib/figure.ts"
+  ]
 }

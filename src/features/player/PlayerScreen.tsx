@@ -21,6 +21,7 @@ import { SwapSheet } from './SwapSheet';
 import { EndScreen } from './EndScreen';
 import { TightnessRating } from './TightnessRating';
 import { Footer, PlayerButton, SideBadge } from './ui';
+import { ExerciseIllustration } from '../illustrations/ExerciseIllustration';
 
 export function PlayerScreen() {
   const { programId, sessionId } = useParams();
@@ -89,7 +90,12 @@ function Player({ program, session }: { program: Program; session: Session }) {
           complete();
         }}
         onSkip={complete}
-      />
+      >
+        <TightnessRating
+          value={item.tightness}
+          onChange={(value) => dispatch({ type: 'rate', item: step.item, value })}
+        />
+      </RestView>
     );
   } else {
     const swappable = canSwap(state);
@@ -125,9 +131,15 @@ function Player({ program, session }: { program: Program; session: Session }) {
           {step.side && <SideBadge side={step.side} />}
         </div>
 
+        <ExerciseIllustration
+          exerciseId={exercise.id}
+          animate
+          className="mx-auto mt-2 h-[min(9rem,17dvh)] w-auto"
+        />
+
         {item.dose.kind === 'reps' ? (
           <>
-            <div className="mt-8 text-center">
+            <div className="mt-1 text-center">
               <div className="text-8xl font-bold tabular-nums">{item.dose.reps}</div>
               <div className="text-lg text-slate-500 dark:text-slate-400">reps</div>
             </div>
@@ -154,11 +166,7 @@ function Player({ program, session }: { program: Program; session: Session }) {
             }}
             secondary={
               <>
-                <Cues exercise={exercise} />
-                <TightnessRating
-                  value={item.tightness}
-                  onChange={(value) => dispatch({ type: 'rate', item: step.item, value })}
-                />
+                <Cues exercise={exercise} collapsible />
                 {secondary}
               </>
             }
@@ -230,13 +238,22 @@ function Player({ program, session }: { program: Program; session: Session }) {
   );
 }
 
-function Cues({ exercise }: { exercise: Exercise }) {
-  return (
-    <ul className="mt-4 grid gap-1 text-sm text-slate-600 dark:text-slate-300">
+function Cues({ exercise, collapsible = false }: { exercise: Exercise; collapsible?: boolean }) {
+  const list = (
+    <ul className="mt-2 grid gap-1 text-sm text-slate-600 dark:text-slate-300">
       {exercise.cues.map((c) => (
         <li key={c}>• {c}</li>
       ))}
       <li className="text-amber-700 dark:text-amber-300">⚠︎ {exercise.cautions[0]}</li>
     </ul>
+  );
+  if (!collapsible) return <div className="mt-2">{list}</div>;
+  return (
+    <details className="text-sm">
+      <summary className="flex min-h-11 cursor-pointer items-center font-medium text-slate-600 dark:text-slate-300">
+        How to do it
+      </summary>
+      {list}
+    </details>
   );
 }

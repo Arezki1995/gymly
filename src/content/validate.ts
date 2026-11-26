@@ -1,7 +1,13 @@
 import type { z } from 'zod';
-import { AssessmentsFile, ExercisesFile, ProgramsFile } from './schema.ts';
+import { AssessmentsFile, ExercisesFile, IllustrationsFile, ProgramsFile } from './schema.ts';
+import { resolvePose } from '../lib/figure.ts';
 
-export type RawContent = { exercises: unknown; programs: unknown; assessments: unknown };
+export type RawContent = {
+  exercises: unknown;
+  programs: unknown;
+  assessments: unknown;
+  illustrations: unknown;
+};
 
 function schemaErrors(file: string, schema: z.ZodType, data: unknown): string[] {
   const result = schema.safeParse(data);
@@ -26,6 +32,7 @@ export function validateContent(raw: RawContent): string[] {
     ...schemaErrors('exercises.json', ExercisesFile, raw.exercises),
     ...schemaErrors('programs.json', ProgramsFile, raw.programs),
     ...schemaErrors('assessments.json', AssessmentsFile, raw.assessments),
+    ...schemaErrors('illustrations.json', IllustrationsFile, raw.illustrations),
   ];
   // Reference checks need well-formed data; stop here if schemas failed.
   if (errors.length) return errors;
@@ -33,6 +40,7 @@ export function validateContent(raw: RawContent): string[] {
   const exercises = ExercisesFile.parse(raw.exercises);
   const programs = ProgramsFile.parse(raw.programs);
   const assessments = AssessmentsFile.parse(raw.assessments);
+  const illustrations = IllustrationsFile.parse(raw.illustrations);
   const exerciseIds = new Set(exercises.map((e) => e.id));
 
   for (const id of duplicates(exercises.map((e) => e.id)))
@@ -62,6 +70,25 @@ export function validateContent(raw: RawContent): string[] {
             errors.push(
               `programs.json: "${p.id}" › "${s.id}" uses missing exercise "${item.exerciseId}"`,
             );
+
+  for (const id of duplicates(illustrations.map((i) => i.exerciseId)))
+    errors.push(`illustrations.json: more than one illustration for "${id}"`);
+  const illustrated = new Set(illustrations.map((i) => i.exerciseId));
+  for (const e of exercises)
+    if (!illustrated.has(e.id)) errors.push(`illustrations.json: no illustration for "${e.id}"`);
+  for (const ill of illustrations) {
+    if (!exerciseIds.has(ill.exerciseId))
+      errors.push(`illustrations.json: "${ill.exerciseId}" is not an exercise`);
+    ill.frames.forEach((pose, i) => {
+      try {
+        resolvePose(pose, ill.face);
+      } catch (err) {
+        errors.push(
+          `illustrations.json: "${ill.exerciseId}" frame ${i}: ${(err as Error).message}`,
+        );
+      }
+    });
+  }
 
   return errors;
 }

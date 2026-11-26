@@ -24,7 +24,7 @@ export function CountdownRing({ remaining, total, caption, tone = 'brand' }: Pro
       ? `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`
       : seconds;
   return (
-    <div className="relative mx-auto aspect-square w-[min(12rem,24dvh)]">
+    <div className="relative mx-auto aspect-square w-[min(11rem,22dvh)]">
       <svg viewBox="0 0 200 200" className="size-full -rotate-90" aria-hidden>
         <circle
           cx="100"

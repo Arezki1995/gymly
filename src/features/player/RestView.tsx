@@ -5,13 +5,15 @@ import { Footer, PlayerButton, SideBadge } from './ui';
 
 type Props = {
   seconds: number;
+  /** Shown under the timer, e.g. the "Felt tight?" rating. */
+  children?: React.ReactNode;
   upNext: { name: string; set: number; sets: number; side?: 'L' | 'R' };
   onFinished: () => void;
   onSkip: () => void;
 };
 
 /** Rest between sets: counts down, then moves on by itself. */
-export function RestView({ seconds, upNext, onFinished, onSkip }: Props) {
+export function RestView({ seconds, upNext, onFinished, onSkip, children }: Props) {
   const timer = useCountdown(onFinished);
   const { start } = timer;
   useEffect(() => start(seconds), [start, seconds]);
@@ -39,6 +41,7 @@ export function RestView({ seconds, upNext, onFinished, onSkip }: Props) {
           {upNext.side && <SideBadge side={upNext.side} />}
         </div>
       </div>
+      {children}
       <Footer>
         <div className="grid grid-cols-[auto_1fr] gap-3">
           <PlayerButton variant="secondary" className="min-h-16 px-6" onClick={() => timer.add(15)}>
