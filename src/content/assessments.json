@@ -1,0 +1,134 @@
+[
+  {
+    "id": "shoulder-er-90",
+    "name": "Shoulder external rotation at 90°",
+    "goal": "shoulder-er",
+    "instructions": [
+      "Lie on your back, upper arm out to the side at shoulder height, elbow bent 90°.",
+      "Let the hand fall back toward the floor behind your head without arching your back.",
+      "Estimate the forearm angle: 0° is pointing at the ceiling, 90° is flat on the floor."
+    ],
+    "measure": { "kind": "degrees", "min": 0, "max": 135, "higherIsBetter": true, "target": 90 },
+    "unilateral": true
+  },
+  {
+    "id": "shoulder-ir-90",
+    "name": "Shoulder internal rotation at 90°",
+    "goal": "shoulder-ir",
+    "instructions": [
+      "Same start position: on your back, arm out at shoulder height, elbow bent 90°.",
+      "Rotate the hand forward and down toward your hip.",
+      "Stop as soon as the front of the shoulder starts lifting off the floor, and estimate the angle from vertical."
+    ],
+    "measure": { "kind": "degrees", "min": 0, "max": 110, "higherIsBetter": true, "target": 65 },
+    "unilateral": true
+  },
+  {
+    "id": "apley-scratch",
+    "name": "Apley scratch test",
+    "goal": "shoulder-ir",
+    "instructions": [
+      "Stand tall. Reach one hand over the shoulder and down your back, palm toward you.",
+      "Bring the other hand up your back from below, palm facing out.",
+      "Measure the gap between the fingertips. Enter a negative number if they overlap.",
+      "The side you log is the arm that goes over the top."
+    ],
+    "measure": { "kind": "cm", "min": -20, "max": 40, "higherIsBetter": false, "target": 0 },
+    "unilateral": true
+  },
+  {
+    "id": "wall-flexion",
+    "name": "Wall overhead reach",
+    "goal": "shoulder-flexion",
+    "instructions": [
+      "Stand with heels, bum, upper back and head against a wall, feet a small step forward.",
+      "Keep your lower back close to the wall and raise straight arms overhead.",
+      "Pick the score that matches what happens."
+    ],
+    "measure": {
+      "kind": "score",
+      "min": 0,
+      "max": 3,
+      "higherIsBetter": true,
+      "target": 3,
+      "scoreLabels": [
+        "Hands can't reach the wall",
+        "Hands touch the wall, but only by arching the back",
+        "Hands touch the wall with the back flat",
+        "Easy: hands touch flat with room to spare"
+      ]
+    },
+    "unilateral": false
+  },
+  {
+    "id": "hip-ir-seated",
+    "name": "Seated hip internal rotation",
+    "goal": "hip-ir",
+    "instructions": [
+      "Sit tall on the end of a bench, knees bent 90° and together.",
+      "Keeping the thigh still, swing the foot outward.",
+      "Estimate the shin angle from vertical without leaning your body."
+    ],
+    "measure": { "kind": "degrees", "min": 0, "max": 70, "higherIsBetter": true, "target": 40 },
+    "unilateral": true
+  },
+  {
+    "id": "hip-er-seated",
+    "name": "Seated hip external rotation",
+    "goal": "hip-er",
+    "instructions": [
+      "Sit tall on the end of a bench, knees bent 90°.",
+      "Keeping the thigh still, swing the foot inward across the other leg.",
+      "Estimate the shin angle from vertical without leaning your body."
+    ],
+    "measure": { "kind": "degrees", "min": 0, "max": 80, "higherIsBetter": true, "target": 45 },
+    "unilateral": true
+  },
+  {
+    "id": "deep-squat-hold",
+    "name": "Deep squat hold",
+    "goal": "hip-flexion",
+    "instructions": [
+      "Feet about shoulder-width, toes slightly out.",
+      "Sink into the deepest squat you can with heels flat on the floor.",
+      "Time how long you can hold it comfortably, without holding on to anything."
+    ],
+    "measure": { "kind": "seconds", "min": 0, "max": 300, "higherIsBetter": true, "target": 60 },
+    "unilateral": false
+  },
+  {
+    "id": "thomas-test",
+    "name": "Thomas test (hip flexors)",
+    "goal": "hip-extension",
+    "instructions": [
+      "Sit right on the end of a bench, then roll back while hugging one knee to your chest.",
+      "Let the other leg hang over the end of the bench and relax.",
+      "Watch the hanging thigh. The side you log is the hanging leg."
+    ],
+    "measure": {
+      "kind": "score",
+      "min": 0,
+      "max": 2,
+      "higherIsBetter": true,
+      "target": 2,
+      "scoreLabels": [
+        "Thigh stays clearly above the bench",
+        "Thigh nearly flat, or the knee straightens out",
+        "Thigh rests flat with the knee bent"
+      ]
+    },
+    "unilateral": true
+  },
+  {
+    "id": "knee-to-wall",
+    "name": "Knee-to-wall",
+    "goal": "ankle-dorsiflexion",
+    "instructions": [
+      "Half-kneel facing a wall, front foot pointing straight at it.",
+      "Drive the knee forward to touch the wall while keeping the heel down.",
+      "Slide the foot back until it's the furthest distance where you can still touch. Measure toe to wall."
+    ],
+    "measure": { "kind": "cm", "min": 0, "max": 20, "higherIsBetter": true, "target": 10 },
+    "unilateral": true
+  }
+]

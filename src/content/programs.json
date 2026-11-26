@@ -1,0 +1,547 @@
+[
+  {
+    "id": "rotator-reset",
+    "name": "Rotator Reset",
+    "description": "Rebuild shoulder rotation both ways. Light cable and dumbbell rotator-cuff work, plus stretches for internal rotation and shoulder-blade control.",
+    "goals": ["shoulder-er", "shoulder-ir", "scapular-control"],
+    "weeks": 4,
+    "sessionsPerWeek": 3,
+    "progression": {
+      "everyWeeks": 2,
+      "rule": "add-set"
+    },
+    "sessions": [
+      {
+        "id": "rotator-reset-a",
+        "name": "Session A",
+        "estMinutes": 25,
+        "blocks": [
+          {
+            "title": "Warm-up",
+            "items": [
+              {
+                "exerciseId": "shoulder-cars"
+              }
+            ]
+          },
+          {
+            "title": "Rotator cuff",
+            "items": [
+              {
+                "exerciseId": "cable-er-0"
+              },
+              {
+                "exerciseId": "cable-ir-0"
+              },
+              {
+                "exerciseId": "side-lying-db-er",
+                "sets": 2
+              }
+            ]
+          },
+          {
+            "title": "Stretch & control",
+            "items": [
+              {
+                "exerciseId": "sleeper-stretch"
+              },
+              {
+                "exerciseId": "face-pull-er"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rotator-reset-b",
+        "name": "Session B",
+        "estMinutes": 25,
+        "blocks": [
+          {
+            "title": "Warm-up",
+            "items": [
+              {
+                "exerciseId": "shoulder-cars"
+              },
+              {
+                "exerciseId": "open-book",
+                "sets": 1
+              }
+            ]
+          },
+          {
+            "title": "Rotator cuff",
+            "items": [
+              {
+                "exerciseId": "cable-er-90"
+              },
+              {
+                "exerciseId": "cuban-press",
+                "sets": 2
+              }
+            ]
+          },
+          {
+            "title": "Stretch & control",
+            "items": [
+              {
+                "exerciseId": "cross-body-stretch"
+              },
+              {
+                "exerciseId": "scap-pullups"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rotator-reset-c",
+        "name": "Session C",
+        "estMinutes": 25,
+        "blocks": [
+          {
+            "title": "Warm-up",
+            "items": [
+              {
+                "exerciseId": "shoulder-cars"
+              }
+            ]
+          },
+          {
+            "title": "Rotator cuff",
+            "items": [
+              {
+                "exerciseId": "side-lying-db-er"
+              },
+              {
+                "exerciseId": "cable-ir-0"
+              },
+              {
+                "exerciseId": "face-pull-er"
+              }
+            ]
+          },
+          {
+            "title": "Stretch & control",
+            "items": [
+              {
+                "exerciseId": "sleeper-stretch"
+              },
+              {
+                "exerciseId": "prone-ytw"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "overhead-unlock",
+    "name": "Overhead Unlock",
+    "description": "Get your arms fully overhead without arching. Opens the upper back, stretches the lats and trains the shoulder blades to move well.",
+    "goals": ["shoulder-flexion", "thoracic-extension"],
+    "weeks": 4,
+    "sessionsPerWeek": 2,
+    "progression": {
+      "everyWeeks": 2,
+      "rule": "add-seconds"
+    },
+    "sessions": [
+      {
+        "id": "overhead-unlock-a",
+        "name": "Session A",
+        "estMinutes": 20,
+        "blocks": [
+          {
+            "title": "Upper back",
+            "items": [
+              {
+                "exerciseId": "foam-roller-tspine-ext"
+              },
+              {
+                "exerciseId": "open-book"
+              }
+            ]
+          },
+          {
+            "title": "Lats & overhead",
+            "items": [
+              {
+                "exerciseId": "bench-lat-stretch"
+              },
+              {
+                "exerciseId": "wall-slides"
+              }
+            ]
+          },
+          {
+            "title": "Control & hang",
+            "items": [
+              {
+                "exerciseId": "prone-ytw"
+              },
+              {
+                "exerciseId": "dead-hang",
+                "sets": 2
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "overhead-unlock-b",
+        "name": "Session B",
+        "estMinutes": 20,
+        "blocks": [
+          {
+            "title": "Upper back",
+            "items": [
+              {
+                "exerciseId": "cat-cow"
+              },
+              {
+                "exerciseId": "thread-the-needle"
+              },
+              {
+                "exerciseId": "foam-roller-tspine-ext",
+                "sets": 1
+              }
+            ]
+          },
+          {
+            "title": "Lats & overhead",
+            "items": [
+              {
+                "exerciseId": "wall-slides"
+              },
+              {
+                "exerciseId": "bench-lat-stretch"
+              }
+            ]
+          },
+          {
+            "title": "Control & hang",
+            "items": [
+              {
+                "exerciseId": "scap-pullups"
+              },
+              {
+                "exerciseId": "dead-hang",
+                "sets": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hip-opener",
+    "name": "Hip Opener",
+    "description": "Hip rotation both ways, a deeper squat and looser hip flexors. Mostly floor and bench work, with a kettlebell for the squat pry.",
+    "goals": ["hip-ir", "hip-er", "hip-flexion", "hip-extension"],
+    "weeks": 4,
+    "sessionsPerWeek": 3,
+    "progression": {
+      "everyWeeks": 2,
+      "rule": "level-up"
+    },
+    "sessions": [
+      {
+        "id": "hip-opener-a",
+        "name": "Session A",
+        "estMinutes": 25,
+        "blocks": [
+          {
+            "title": "Warm-up",
+            "items": [
+              {
+                "exerciseId": "hip-cars"
+              }
+            ]
+          },
+          {
+            "title": "Rotation",
+            "items": [
+              {
+                "exerciseId": "90-90-switches"
+              },
+              {
+                "exerciseId": "90-90-ir-liftoff"
+              }
+            ]
+          },
+          {
+            "title": "Flexors & squat",
+            "items": [
+              {
+                "exerciseId": "couch-stretch"
+              },
+              {
+                "exerciseId": "goblet-squat-pry"
+              },
+              {
+                "exerciseId": "cossack-squat"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hip-opener-b",
+        "name": "Session B",
+        "estMinutes": 25,
+        "blocks": [
+          {
+            "title": "Warm-up",
+            "items": [
+              {
+                "exerciseId": "hip-cars"
+              },
+              {
+                "exerciseId": "worlds-greatest-stretch"
+              }
+            ]
+          },
+          {
+            "title": "Rotation",
+            "items": [
+              {
+                "exerciseId": "bench-figure-4"
+              },
+              {
+                "exerciseId": "adductor-rockback"
+              }
+            ]
+          },
+          {
+            "title": "Flexors & squat",
+            "items": [
+              {
+                "exerciseId": "half-kneeling-hip-flexor"
+              },
+              {
+                "exerciseId": "deep-squat-hold"
+              },
+              {
+                "exerciseId": "knee-to-wall",
+                "sets": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hip-opener-c",
+        "name": "Session C",
+        "estMinutes": 25,
+        "blocks": [
+          {
+            "title": "Warm-up",
+            "items": [
+              {
+                "exerciseId": "hip-cars"
+              }
+            ]
+          },
+          {
+            "title": "Rotation",
+            "items": [
+              {
+                "exerciseId": "90-90-switches"
+              },
+              {
+                "exerciseId": "cable-hip-abduction"
+              }
+            ]
+          },
+          {
+            "title": "Flexors & squat",
+            "items": [
+              {
+                "exerciseId": "half-kneeling-hip-flexor"
+              },
+              {
+                "exerciseId": "goblet-squat-pry"
+              },
+              {
+                "exerciseId": "adductor-rockback",
+                "sets": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "joint-health-daily",
+    "name": "Joint Health Daily",
+    "description": "Ten minutes of slow, controlled joint circles for shoulders, spine, hips and ankles. Do it every day; it never really ends.",
+    "goals": ["joint-health"],
+    "weeks": 4,
+    "sessionsPerWeek": 7,
+    "progression": {
+      "everyWeeks": 4,
+      "rule": "add-reps"
+    },
+    "sessions": [
+      {
+        "id": "joint-health-daily-a",
+        "name": "Session A",
+        "estMinutes": 10,
+        "blocks": [
+          {
+            "title": "Joint circles",
+            "items": [
+              {
+                "exerciseId": "shoulder-cars"
+              },
+              {
+                "exerciseId": "cat-cow"
+              },
+              {
+                "exerciseId": "hip-cars"
+              },
+              {
+                "exerciseId": "knee-to-wall",
+                "sets": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "joint-health-daily-b",
+        "name": "Session B",
+        "estMinutes": 10,
+        "blocks": [
+          {
+            "title": "Joint circles",
+            "items": [
+              {
+                "exerciseId": "shoulder-cars"
+              },
+              {
+                "exerciseId": "cat-cow"
+              },
+              {
+                "exerciseId": "hip-cars"
+              }
+            ]
+          },
+          {
+            "title": "Extra range",
+            "items": [
+              {
+                "exerciseId": "open-book",
+                "sets": 1
+              },
+              {
+                "exerciseId": "knee-to-wall",
+                "sets": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "warm-up-primer",
+    "name": "Warm-up Primer",
+    "description": "A quick full-body warm-up to do before any lifting session: spine, hips and shoulders in about eight minutes.",
+    "goals": ["joint-health", "thoracic-rotation", "hip-extension", "scapular-control"],
+    "weeks": 4,
+    "sessionsPerWeek": 3,
+    "progression": {
+      "everyWeeks": 4,
+      "rule": "add-reps"
+    },
+    "sessions": [
+      {
+        "id": "warm-up-primer-a",
+        "name": "Session A",
+        "estMinutes": 8,
+        "blocks": [
+          {
+            "title": "Spine",
+            "items": [
+              {
+                "exerciseId": "cat-cow"
+              },
+              {
+                "exerciseId": "thread-the-needle",
+                "sets": 1
+              }
+            ]
+          },
+          {
+            "title": "Hips",
+            "items": [
+              {
+                "exerciseId": "worlds-greatest-stretch"
+              },
+              {
+                "exerciseId": "hip-cars"
+              }
+            ]
+          },
+          {
+            "title": "Shoulders",
+            "items": [
+              {
+                "exerciseId": "face-pull-er",
+                "sets": 2,
+                "dose": {
+                  "kind": "reps",
+                  "reps": 12
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "warm-up-primer-b",
+        "name": "Session B",
+        "estMinutes": 8,
+        "blocks": [
+          {
+            "title": "Spine",
+            "items": [
+              {
+                "exerciseId": "cat-cow"
+              },
+              {
+                "exerciseId": "open-book",
+                "sets": 1
+              }
+            ]
+          },
+          {
+            "title": "Hips",
+            "items": [
+              {
+                "exerciseId": "worlds-greatest-stretch"
+              },
+              {
+                "exerciseId": "hip-cars"
+              }
+            ]
+          },
+          {
+            "title": "Shoulders",
+            "items": [
+              {
+                "exerciseId": "wall-slides",
+                "sets": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

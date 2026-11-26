@@ -3,11 +3,32 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import type { Plugin } from 'vite';
+import { readFileSync } from 'node:fs';
+import { validateContent } from './src/content/validate.ts';
+
+/** Fails the build (and dev server start) if any content file is invalid. */
+function validateContentPlugin(): Plugin {
+  const read = (name: string): unknown =>
+    JSON.parse(readFileSync(new URL(`./src/content/${name}.json`, import.meta.url), 'utf8'));
+  return {
+    name: 'gymly:validate-content',
+    buildStart() {
+      const errors = validateContent({
+        exercises: read('exercises'),
+        programs: read('programs'),
+        assessments: read('assessments'),
+      });
+      if (errors.length) this.error(`Invalid content:\n  ${errors.join('\n  ')}`);
+    },
+  };
+}
 
 // Relative base so the build works on GitHub Pages project sites and any static host.
 export default defineConfig({
   base: './',
   plugins: [
+    validateContentPlugin(),
     react(),
     tailwindcss(),
     VitePWA({
